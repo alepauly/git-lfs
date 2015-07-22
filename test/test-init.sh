@@ -25,7 +25,12 @@ begin_test "init with old settings"
 
   git lfs init 2> init.log
 
-  grep "clean filter should be" init.log
+  grep "clean filter should be" init.log || {
+    echo "no clean filter warning :("
+    git config filter.lfs.smudge
+    git config filter.lfs.clean
+    exit 1
+  }
 
   [ "git lfs smudge %f" = "$(git config filter.lfs.smudge)" ]
   [ "git lfs clean %f" = "$(git config filter.lfs.clean)" ]
