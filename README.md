@@ -1,5 +1,7 @@
 # Git Large File Storage [![Build Status](https://travis-ci.org/github/git-lfs.svg?branch=master)](https://travis-ci.org/github/git-lfs)
 
+Test
+
 Git LFS is a command line extension and [specification](docs/spec.md) for
 managing large files with Git. The client is written in Go, with pre-compiled
 binaries available for Mac, Windows, Linux, and FreeBSD. Check out the
